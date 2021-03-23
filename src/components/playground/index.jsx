@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import {
   Compiler,
   Knobs,
@@ -9,15 +8,12 @@ import {
   Placeholder,
 } from "react-view";
 
-export default ({ params }) => {
+import styles from "./Playground.module.css";
+
+export default function Playground({ params }) {
   return (
     <React.Fragment>
-      <div
-        style={{
-          border: "1px dashed #ccc",
-          position:'relative'
-        }}
-      >
+      <div className={styles.playground_area}>
         <Compiler
           {...params.compilerProps}
           minHeight={62}
@@ -31,4 +27,4 @@ export default ({ params }) => {
       <ActionButtons {...params.actions} />
     </React.Fragment>
   );
-};
+}

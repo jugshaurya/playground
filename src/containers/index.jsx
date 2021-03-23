@@ -1,15 +1,19 @@
 import React from "react";
-import Drawer from "./Drawer";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { HashRouter as Router } from "react-router-dom";
 
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+
+import Drawer from "./Drawer";
+
+const primaryColor = "#2089dc";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#2089dc",
+      main: primaryColor,
     },
   },
 });
+
 export default function () {
   return (
     <ThemeProvider theme={theme}>

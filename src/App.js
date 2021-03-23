@@ -1,8 +1,12 @@
 import React from "react";
-import { SafeAreaInsetsContext, SafeAreaProvider } from 'react-native-safe-area-context';
+import {
+  SafeAreaInsetsContext,
+  SafeAreaProvider,
+} from "react-native-safe-area-context";
 
 import Root from "./containers";
 import "./App.css";
+
 function App() {
   return (
     <SafeAreaInsetsContext.Provider>

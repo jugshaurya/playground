@@ -1,23 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Paper,
-  Grid,
-  ListItem,
-  Typography,
-  Button,
-  Divider,
-} from "@material-ui/core";
+
+import { Grid, Typography, Divider } from "@material-ui/core";
 import pjson from "../../../package.json";
 import styles from "./Footer.module.css";
 
-function Footer() {
+export default function Footer() {
   return (
     <footer>
       <Grid container spacing={5} justify="center">
         <Grid item xs={12} md={6} lg={4}>
           <Typography variant="h4" style={{ marginBottom: 10 }}>
-           Playground <span role="img" aria-label="playground">🚀</span>
+            Playground{" "}
+            <span role="img" aria-label="playground">
+              🚀
+            </span>
           </Typography>
 
           <Divider />
@@ -30,12 +26,20 @@ function Footer() {
             <Typography>GitHub Repositoy</Typography>
           </a>
 
-          <a href="https://reactnativeelements.com/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://reactnativeelements.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Typography>Official Docs</Typography>
           </a>
           <br />
 
-          <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.netlify.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"
               alt="Deploys by Netlify"
@@ -86,5 +90,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

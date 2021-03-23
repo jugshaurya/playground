@@ -1,10 +1,9 @@
 import React from "react";
-import clsx from "clsx";
-import { makeStyles } from "@material-ui/core/styles";
 
 import { Drawer, Fab } from "@material-ui/core";
+import styles from "./PropDrawer.module.css";
 
-export default function TemporaryDrawer(props) {
+export default function PropDrawer({ children }) {
   const [state, setState] = React.useState({
     right: false,
   });
@@ -41,15 +40,7 @@ export default function TemporaryDrawer(props) {
           open={state["right"]}
           onClose={toggleDrawer("right", false)}
         >
-          <div
-            style={{
-              width: "70vw",
-              maxWidth: 700,
-              paddingLeft: "1rem",
-            }}
-          >
-            {props.children}
-          </div>
+          <div className={styles.propdrawer_content}>{children}</div>
         </Drawer>
       </React.Fragment>
     </div>
