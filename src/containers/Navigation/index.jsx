@@ -12,6 +12,7 @@ import HomePage from "../../pages/home";
 import ExplorePage from "../../pages/explore";
 
 import Footer from "../../components/Footer";
+import Content from "../../content";
 import playgroundComponents from "../../shared/playgroundComponents";
 
 export default function App() {
@@ -26,7 +27,13 @@ export default function App() {
                   {elm.name} | Playground 🚀 - React Native Elements
                 </title>
               </Helmet>
-              <elm.component />
+              {elm.ContentMDX && (
+                <Content
+                  ContentPlayground={elm.ContentPlayground}
+                  ContentMDX={elm.ContentMDX}
+                />
+              )}
+              {elm.component && <elm.component />}
             </Route>
           );
         })}

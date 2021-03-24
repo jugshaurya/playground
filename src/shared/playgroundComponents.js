@@ -1,4 +1,5 @@
-import Avatar from "../content/Avatar";
+import React from "react";
+import AvatarPlayground from "../content/Avatar/avatar.playground";
 import Button from "../content/Button";
 import Badge from "../content/Badge";
 import Tile from "../content/Tile";
@@ -22,11 +23,14 @@ import BottomSheet from "../content/BottomSheet";
 import ButtonGroup from "../content/ButtonGroup";
 import Divider from "../content/Divider";
 
+import { importMDX } from "mdx.macro";
+
 const playgroundComponents = [
   {
     name: "Avatar",
-    component: Avatar,
     path: "/avatar",
+    ContentPlayground: AvatarPlayground,
+    ContentMDX: lazy(() => importMDX("../content/Props/avatar.md")),
   },
   {
     name: "Badge",
